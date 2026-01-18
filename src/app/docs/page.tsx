@@ -209,7 +209,7 @@ export default function DeveloperDocs() {
             
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
               <h3 className="font-semibold text-blue-900 mb-2">Base URL</h3>
-              <code className="text-sm bg-white px-3 py-1 rounded text-gray-900">https://your-api-domain.com/api/v1/public</code>
+              <code className="text-sm bg-white px-3 py-1 rounded text-gray-900">http://qr.scanalyzr.com/api/v1/public</code>
             </div>
 
             <h3 className="text-xl font-semibold mb-3 text-gray-900">Key Features</h3>
@@ -251,7 +251,7 @@ export default function DeveloperDocs() {
                   Method 1: X-API-Key Header
                 </h3>
                 <pre className="bg-gray-900 text-gray-100 p-4 rounded overflow-x-auto text-sm">
-{`fetch('https://your-api-domain.com/api/v1/public/qr', {
+{`fetch('http://qr.scanalyzr.com/api/v1/public/qr', {
   headers: {
     'X-API-Key': 'qr_live_your_api_key_here',
     'Content-Type': 'application/json'
@@ -263,7 +263,7 @@ export default function DeveloperDocs() {
               <div className="border rounded-lg p-4">
                 <h3 className="font-semibold mb-2 text-black">Method 2: Authorization Bearer Token</h3>
                 <pre className="bg-gray-900 text-gray-100 p-4 rounded overflow-x-auto text-sm">
-{`fetch('https://your-api-domain.com/api/v1/public/qr', {
+{`fetch('http://qr.scanalyzr.com/api/v1/public/qr', {
   headers: {
     'Authorization': 'Bearer qr_live_your_api_key_here',
     'Content-Type': 'application/json'
@@ -278,7 +278,7 @@ export default function DeveloperDocs() {
                   Method 3: Query Parameter
                 </h3>
                 <pre className="bg-gray-900 text-gray-100 p-4 rounded overflow-x-auto text-sm">
-{`https://your-api-domain.com/api/v1/public/qr?apiKey=qr_live_your_api_key_here`}
+{`http://qr.scanalyzr.com/api/v1/public/qr?apiKey=qr_live_your_api_key_here`}
                 </pre>
                 <p className="text-sm text-yellow-700 mt-2">⚠️ Avoid in production - API keys may appear in server logs</p>
               </div>
@@ -304,7 +304,7 @@ export default function DeveloperDocs() {
                 <h3 className="text-xl font-semibold mb-3 text-gray-900">Step 2: Make Your First Request</h3>
                 <div className="bg-gray-900 text-gray-100 p-4 rounded overflow-x-auto">
                   <pre className="text-sm">
-{`curl -X POST https://your-api-domain.com/api/v1/public/qr \\
+{`curl -X POST http://qr.scanalyzr.com/api/v1/public/qr \\
   -H "X-API-Key: qr_live_your_api_key_here" \\
   -H "Content-Type: application/json" \\
   -d '{
@@ -396,7 +396,7 @@ export default function DeveloperDocs() {
             <div className="bg-gray-900 text-gray-100 p-4 rounded overflow-x-auto mb-6">
               <pre className="text-sm">
 {`const createQRCode = async () => {
-  const response = await fetch('https://your-api-domain.com/api/v1/public/qr', {
+  const response = await fetch('http://qr.scanalyzr.com/api/v1/public/qr', {
     method: 'POST',
     headers: {
       'X-API-Key': 'qr_live_your_api_key_here',
@@ -459,7 +459,7 @@ export default function DeveloperDocs() {
               <pre className="text-sm">
 {`const getQRCodes = async (page = 1, limit = 10) => {
   const response = await fetch(
-    \`https://your-api-domain.com/api/v1/public/qr?page=\${page}&limit=\${limit}\`,
+    \`http://qr.scanalyzr.com/api/v1/public/qr?page=\${page}&limit=\${limit}\`,
     {
       headers: {
         'X-API-Key': 'qr_live_your_api_key_here'
@@ -508,7 +508,7 @@ export default function DeveloperDocs() {
               <pre className="text-sm">
 {`const getQRCode = async (qrCodeId) => {
   const response = await fetch(
-    \`https://your-api-domain.com/api/v1/public/qr/\${qrCodeId}\`,
+    \`http://qr.scanalyzr.com/api/v1/public/qr/\${qrCodeId}\`,
     {
       headers: {
         'X-API-Key': 'qr_live_your_api_key_here'
@@ -597,7 +597,7 @@ export default function DeveloperDocs() {
               <pre className="text-sm">
 {`const updateQRCode = async (qrCodeId, updates) => {
   const response = await fetch(
-    \`https://your-api-domain.com/api/v1/public/qr/\${qrCodeId}\`,
+    \`http://qr.scanalyzr.com/api/v1/public/qr/\${qrCodeId}\`,
     {
       method: 'PATCH',
       headers: {
@@ -681,7 +681,7 @@ await updateQRCode('cm5abc123xyz', {
               <pre className="text-sm">
 {`const deleteQRCode = async (qrCodeId) => {
   const response = await fetch(
-    \`https://your-api-domain.com/api/v1/public/qr/\${qrCodeId}\`,
+    \`http://qr.scanalyzr.com/api/v1/public/qr/\${qrCodeId}\`,
     {
       method: 'DELETE',
       headers: {
@@ -724,7 +724,7 @@ await updateQRCode('cm5abc123xyz', {
               <pre className="text-sm">
 {`const getAnalytics = async (qrCodeId) => {
   const response = await fetch(
-    \`https://your-api-domain.com/api/v1/public/qr/\${qrCodeId}/analytics\`,
+    \`http://qr.scanalyzr.com/api/v1/public/qr/\${qrCodeId}/analytics\`,
     {
       headers: {
         'X-API-Key': 'qr_live_your_api_key_here'

@@ -1,6 +1,6 @@
 import axios, { AxiosInstance, AxiosError } from "axios";
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api/v1";
+const BASE_URL = process.env.API_URL || "http://qr.scanalyzr.com";
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY || "";
 
 // Create axios instance for public API (with API Key)

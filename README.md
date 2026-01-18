@@ -15,7 +15,7 @@ npm install
 Copy the `.env.local` file and update with your API credentials:
 
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:5000/api/v1
+API_URL=http://qr.scanalyzr.com
 NEXT_PUBLIC_API_KEY=your_api_key_here
 ```
 
@@ -139,7 +139,7 @@ Direct API testing:
 
 ```bash
 # Create QR Code
-curl -X POST http://localhost:5000/api/v1/public/qr \
+curl -X POST http://qr.scanalyzr.com/public/qr \
   -H "X-API-Key: your_api_key" \
   -H "Content-Type: application/json" \
   -d '{
@@ -149,15 +149,15 @@ curl -X POST http://localhost:5000/api/v1/public/qr \
   }'
 
 # List QR Codes
-curl -X GET "http://localhost:5000/api/v1/public/qr?limit=5" \
+curl -X GET "http://qr.scanalyzr.com/public/qr?limit=5" \
   -H "X-API-Key: your_api_key"
 
 # Get QR Code
-curl -X GET http://localhost:5000/api/v1/public/qr/{id} \
+curl -X GET http://qr.scanalyzr.com/public/qr/{id} \
   -H "X-API-Key: your_api_key"
 
 # Update QR Code
-curl -X PATCH http://localhost:5000/api/v1/public/qr/{id} \
+curl -X PATCH http://qr.scanalyzr.com/public/qr/{id} \
   -H "X-API-Key: your_api_key" \
   -H "Content-Type: application/json" \
   -d '{
@@ -165,11 +165,11 @@ curl -X PATCH http://localhost:5000/api/v1/public/qr/{id} \
   }'
 
 # Delete QR Code
-curl -X DELETE http://localhost:5000/api/v1/public/qr/{id} \
+curl -X DELETE http://qr.scanalyzr.com/public/qr/{id} \
   -H "X-API-Key: your_api_key"
 
 # Get Analytics
-curl -X GET http://localhost:5000/api/v1/public/qr/{id}/analytics \
+curl -X GET http://qr.scanalyzr.com/public/qr/{id}/analytics \
   -H "X-API-Key: your_api_key"
 ```
 

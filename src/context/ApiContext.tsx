@@ -13,7 +13,7 @@ const ApiContext = createContext<ApiContextType | undefined>(undefined);
 
 export const ApiProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [apiKey, setApiKeyState] = useState("");
-  const [baseUrl, setBaseUrlState] = useState("http://localhost:5000/api/v1");
+  const [baseUrl, setBaseUrlState] = useState("http://qr.scanalyzr.com");
 
   // Load from localStorage on mount
   useEffect(() => {
