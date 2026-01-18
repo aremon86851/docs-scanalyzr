@@ -62,11 +62,11 @@ npm init -y
 
 ```env
 # QR Code API Configuration
-NEXT_PUBLIC_API_URL=https://api.yourapp.com/api/v1
+API_URL=https://api.yourapp.com/api/v1
 NEXT_PUBLIC_API_KEY=your_api_key_here
 
 # Optional: For testing multiple environments
-NEXT_PUBLIC_DEV_API_URL=http://localhost:5000/api/v1
+NEXT_PUBLIC_DEV_API_URL=http://qr.scanalyzr.com
 NEXT_PUBLIC_STAGING_API_URL=https://staging-api.yourapp.com/api/v1
 ```
 
@@ -167,7 +167,7 @@ qr-api-testing/
 ```typescript
 import axios, { AxiosInstance, AxiosError } from "axios";
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api/v1";
+const BASE_URL = process.env.API_URL || "http://qr.scanalyzr.com";
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY || "";
 
 // Create axios instance for public API (with API Key)
@@ -439,7 +439,7 @@ export const QRCodeGenerator: React.FC = () => {
 const axios = require("axios");
 require("dotenv").config();
 
-const API_URL = process.env.API_URL || "http://localhost:5000/api/v1";
+const API_URL = process.env.API_URL || "http://qr.scanalyzr.com";
 const API_KEY = process.env.API_KEY;
 
 async function testCreateQR() {
@@ -490,7 +490,7 @@ node scripts/test-create-qr.js
 
 ### Test Case 1: Create QR Code
 ```bash
-curl -X POST http://localhost:5000/api/v1/public/qr \
+curl -X POST http://qr.scanalyzr.com/public/qr \
   -H "X-API-Key: your_api_key" \
   -H "Content-Type: application/json" \
   -d '{
@@ -502,13 +502,13 @@ curl -X POST http://localhost:5000/api/v1/public/qr \
 
 ### Test Case 2: List QR Codes
 ```bash
-curl -X GET "http://localhost:5000/api/v1/public/qr?limit=5" \
+curl -X GET "http://qr.scanalyzr.com/public/qr?limit=5" \
   -H "X-API-Key: your_api_key"
 ```
 
 ### Test Case 3: Update QR Code
 ```bash
-curl -X PATCH http://localhost:5000/api/v1/public/qr/{id} \
+curl -X PATCH http://qr.scanalyzr.com/public/qr/{id} \
   -H "X-API-Key: your_api_key" \
   -H "Content-Type: application/json" \
   -d '{
@@ -519,13 +519,13 @@ curl -X PATCH http://localhost:5000/api/v1/public/qr/{id} \
 
 ### Test Case 4: Delete QR Code
 ```bash
-curl -X DELETE http://localhost:5000/api/v1/public/qr/{id} \
+curl -X DELETE http://qr.scanalyzr.com/public/qr/{id} \
   -H "X-API-Key: your_api_key"
 ```
 
 ### Test Case 5: Get Analytics
 ```bash
-curl -X GET http://localhost:5000/api/v1/public/qr/{id}/analytics \
+curl -X GET http://qr.scanalyzr.com/public/qr/{id}/analytics \
   -H "X-API-Key: your_api_key"
 ```
 

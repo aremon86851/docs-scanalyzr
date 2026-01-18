@@ -71,7 +71,7 @@ You can **override any default** by including optional parameters in your reques
 ### Step 2: Test Authentication
 
 ```bash
-curl -X GET https://your-api-domain.com/api/v1/public/qr \
+curl -X GET http://qr.scanalyzr.com/api/v1/public/qr \
   -H "X-API-Key: qr_live_your_api_key_here"
 ```
 
@@ -86,7 +86,7 @@ The API supports **three authentication methods**:
 ### Method 1: X-API-Key Header (Recommended)
 
 ```javascript
-fetch('https://your-api-domain.com/api/v1/public/qr', {
+fetch('http://qr.scanalyzr.com/api/v1/public/qr', {
   headers: {
     'X-API-Key': 'qr_live_your_api_key_here',
     'Content-Type': 'application/json'
@@ -97,7 +97,7 @@ fetch('https://your-api-domain.com/api/v1/public/qr', {
 ### Method 2: Authorization Bearer Token
 
 ```javascript
-fetch('https://your-api-domain.com/api/v1/public/qr', {
+fetch('http://qr.scanalyzr.com/api/v1/public/qr', {
   headers: {
     'Authorization': 'Bearer qr_live_your_api_key_here',
     'Content-Type': 'application/json'
@@ -108,7 +108,7 @@ fetch('https://your-api-domain.com/api/v1/public/qr', {
 ### Method 3: Query Parameter (Not Recommended for Production)
 
 ```bash
-https://your-api-domain.com/api/v1/public/qr?apiKey=qr_live_your_api_key_here
+http://qr.scanalyzr.com/api/v1/public/qr?apiKey=qr_live_your_api_key_here
 ```
 
 > 🔒 **Security Best Practice**: Use headers (Method 1 or 2) to avoid API keys appearing in server logs.
@@ -120,7 +120,7 @@ https://your-api-domain.com/api/v1/public/qr?apiKey=qr_live_your_api_key_here
 ### Base URL
 
 ```
-https://your-api-domain.com/api/v1/public
+http://qr.scanalyzr.com/api/v1/public
 ```
 
 ### Endpoints Overview
@@ -202,7 +202,7 @@ Creates a new dynamic QR code with default settings (black on white, 500px, IP t
 ```javascript
 // Basic QR Code (minimal required fields)
 const createBasicQRCode = async () => {
-  const response = await fetch('https://your-api-domain.com/api/v1/public/qr', {
+  const response = await fetch('http://qr.scanalyzr.com/api/v1/public/qr', {
     method: 'POST',
     headers: {
       'X-API-Key': 'qr_live_your_api_key_here',
@@ -221,7 +221,7 @@ const createBasicQRCode = async () => {
 
 // Advanced QR Code with all optional parameters
 const createAdvancedQRCode = async () => {
-  const response = await fetch('https://your-api-domain.com/api/v1/public/qr', {
+  const response = await fetch('http://qr.scanalyzr.com/api/v1/public/qr', {
     method: 'POST',
     headers: {
       'X-API-Key': 'qr_live_your_api_key_here',
@@ -304,7 +304,7 @@ GET /api/v1/public/qr?page=1&limit=20
 ```javascript
 const getQRCodes = async (page = 1, limit = 10) => {
   const response = await fetch(
-    `https://your-api-domain.com/api/v1/public/qr?page=${page}&limit=${limit}`,
+    `http://qr.scanalyzr.com/api/v1/public/qr?page=${page}&limit=${limit}`,
     {
       headers: {
         'X-API-Key': 'qr_live_your_api_key_here'
@@ -357,7 +357,7 @@ Retrieves detailed information about a specific QR code.
 ```javascript
 const getQRCode = async (qrCodeId) => {
   const response = await fetch(
-    `https://your-api-domain.com/api/v1/public/qr/${qrCodeId}`,
+    `http://qr.scanalyzr.com/api/v1/public/qr/${qrCodeId}`,
     {
       headers: {
         'X-API-Key': 'qr_live_your_api_key_here'
@@ -423,7 +423,7 @@ Updates an existing QR code's name, destination URL, or active status.
 ```javascript
 const updateQRCode = async (qrCodeId, updates) => {
   const response = await fetch(
-    `https://your-api-domain.com/api/v1/public/qr/${qrCodeId}`,
+    `http://qr.scanalyzr.com/api/v1/public/qr/${qrCodeId}`,
     {
       method: 'PATCH',
       headers: {
@@ -495,7 +495,7 @@ Permanently deletes a QR code and all its associated scan data.
 ```javascript
 const deleteQRCode = async (qrCodeId) => {
   const response = await fetch(
-    `https://your-api-domain.com/api/v1/public/qr/${qrCodeId}`,
+    `http://qr.scanalyzr.com/api/v1/public/qr/${qrCodeId}`,
     {
       method: 'DELETE',
       headers: {
@@ -559,7 +559,7 @@ Retrieves comprehensive analytics for a specific QR code.
 ```javascript
 const getAnalytics = async (qrCodeId) => {
   const response = await fetch(
-    `https://your-api-domain.com/api/v1/public/qr/${qrCodeId}/analytics`,
+    `http://qr.scanalyzr.com/api/v1/public/qr/${qrCodeId}/analytics`,
     {
       headers: {
         'X-API-Key': 'qr_live_your_api_key_here'
@@ -1463,7 +1463,7 @@ Comprehensive business information page.
 const axios = require('axios');
 
 class QRCodeClient {
-  constructor(apiKey, baseUrl = 'https://your-api-domain.com/api/v1/public') {
+  constructor(apiKey, baseUrl = 'http://qr.scanalyzr.com/api/v1/public') {
     this.apiKey = apiKey;
     this.baseUrl = baseUrl;
     this.headers = {
@@ -1611,7 +1611,7 @@ import requests
 import json
 
 class QRCodeClient:
-    def __init__(self, api_key, base_url='https://your-api-domain.com/api/v1/public'):
+    def __init__(self, api_key, base_url='http://qr.scanalyzr.com/api/v1/public'):
         self.api_key = api_key
         self.base_url = base_url
         self.headers = {
@@ -1745,7 +1745,7 @@ class QRCodeClient {
     private $apiKey;
     private $baseUrl;
     
-    public function __construct($apiKey, $baseUrl = 'https://your-api-domain.com/api/v1/public') {
+    public function __construct($apiKey, $baseUrl = 'http://qr.scanalyzr.com/api/v1/public') {
         $this->apiKey = $apiKey;
         $this->baseUrl = $baseUrl;
     }

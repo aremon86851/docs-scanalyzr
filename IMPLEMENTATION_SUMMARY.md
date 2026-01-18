@@ -279,7 +279,7 @@ interface FormData {
 ### Testing API Authentication:
 
 1. Go to **"Test API Key"** tab
-2. Enter your API base URL (default: http://localhost:5000/api/v1)
+2. Enter your API base URL (default: http://qr.scanalyzr.com)
 3. Enter your API key (format: qr_live_...)
 4. Click **"Test API Key"**
 5. View the authentication result and response
