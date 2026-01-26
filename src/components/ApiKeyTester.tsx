@@ -68,7 +68,7 @@ export const ApiKeyTester: React.FC = () => {
             value={tempBaseUrl}
             onChange={(e) => setTempBaseUrl(e.target.value)}
             className="w-full p-3 border rounded"
-            placeholder="https://qr.scanalyzr.com/"
+            placeholder="https://qr.scanalyzr.com"
           />
         </div>
 
