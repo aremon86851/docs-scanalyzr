@@ -95,7 +95,7 @@ export default function TestingDashboard() {
           <p>
             API Base URL:{" "}
             <code className="bg-gray-200 px-2 py-1 rounded">
-              {process.env.API_URL || "http://qr.scanalyzr.com"}
+              {process.env.API_URL || "https://qr.scanalyzr.com//api/v1"}
             </code>
           </p>
           <p className="mt-2">

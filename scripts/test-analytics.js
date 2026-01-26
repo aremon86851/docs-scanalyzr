@@ -1,7 +1,7 @@
 const axios = require("axios");
 require("dotenv").config();
 
-const API_URL = process.env.API_URL || "http://qr.scanalyzr.com";
+const API_URL = process.env.API_URL || "https://qr.scanalyzr.com//api/v1";
 const API_KEY = process.env.API_KEY;
 
 // Replace with an actual QR code ID from your system

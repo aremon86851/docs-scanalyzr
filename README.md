@@ -15,7 +15,7 @@ npm install
 Copy the `.env.local` file and update with your API credentials:
 
 ```env
-API_URL=http://qr.scanalyzr.com
+API_URL=https://qr.scanalyzr.com/
 NEXT_PUBLIC_API_KEY=your_api_key_here
 ```
 
@@ -25,7 +25,7 @@ NEXT_PUBLIC_API_KEY=your_api_key_here
 npm run dev
 ```
 
-Visit [http://localhost:3000](http://localhost:3000)
+Visit [https://qr.scanalyzr.com/](https://qr.scanalyzr.com/)
 
 ## 📁 Project Structure
 
@@ -139,7 +139,7 @@ Direct API testing:
 
 ```bash
 # Create QR Code
-curl -X POST http://qr.scanalyzr.com/public/qr \
+curl -X POST https://qr.scanalyzr.com//public/qr \
   -H "X-API-Key: your_api_key" \
   -H "Content-Type: application/json" \
   -d '{
@@ -149,15 +149,15 @@ curl -X POST http://qr.scanalyzr.com/public/qr \
   }'
 
 # List QR Codes
-curl -X GET "http://qr.scanalyzr.com/public/qr?limit=5" \
+curl -X GET "https://qr.scanalyzr.com//public/qr?limit=5" \
   -H "X-API-Key: your_api_key"
 
 # Get QR Code
-curl -X GET http://qr.scanalyzr.com/public/qr/{id} \
+curl -X GET https://qr.scanalyzr.com//public/qr/{id} \
   -H "X-API-Key: your_api_key"
 
 # Update QR Code
-curl -X PATCH http://qr.scanalyzr.com/public/qr/{id} \
+curl -X PATCH https://qr.scanalyzr.com//public/qr/{id} \
   -H "X-API-Key: your_api_key" \
   -H "Content-Type: application/json" \
   -d '{
@@ -165,11 +165,11 @@ curl -X PATCH http://qr.scanalyzr.com/public/qr/{id} \
   }'
 
 # Delete QR Code
-curl -X DELETE http://qr.scanalyzr.com/public/qr/{id} \
+curl -X DELETE https://qr.scanalyzr.com//public/qr/{id} \
   -H "X-API-Key: your_api_key"
 
 # Get Analytics
-curl -X GET http://qr.scanalyzr.com/public/qr/{id}/analytics \
+curl -X GET https://qr.scanalyzr.com//public/qr/{id}/analytics \
   -H "X-API-Key: your_api_key"
 ```
 
@@ -294,9 +294,9 @@ Before running tests, ensure:
 1. **Generate API Key** - From main dashboard
 2. **Configure Environment** - Update `.env.local`
 3. **Start Dev Server** - `npm run dev`
-4. **Read the Docs** - Visit http://localhost:3000/docs for complete API documentation
+4. **Read the Docs** - Visit https://qr.scanalyzr.com//docs for complete API documentation
 5. **Explore QR Types** - Check the "QR Types Guide" tab
-6. **Test in Browser** - Visit http://localhost:3000
+6. **Test in Browser** - Visit https://qr.scanalyzr.com/
 7. **Create Test QR Code** - Use the web dashboard (try different types!)
 8. **Verify Results** - Check console logs
 9. **Test All Endpoints** - Use different tabs
@@ -316,7 +316,7 @@ A beautiful, comprehensive documentation page with:
 - ✨ Code examples in multiple languages
 - 🎨 Clean, organized sidebar navigation
 
-**Access at**: http://localhost:3000/docs
+**Access at**: https://qr.scanalyzr.com//docs
 
 ### 2. **QR Types Guide** (Dashboard Tab)
 Interactive guide showcasing all 19 QR code types with:
